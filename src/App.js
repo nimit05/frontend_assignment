@@ -2,7 +2,7 @@ import React , {useEffect , useState} from 'react';
 const App = () =>  {
   const [data , setData] = useState([])
   useEffect(() => {
-    fetch('/api')
+    fetch('http://localhost:6878/api')
     .then((res) => res.json())
     .then((d) => {
       if(d){
