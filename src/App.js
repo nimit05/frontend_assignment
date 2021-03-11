@@ -1,15 +1,15 @@
 import React , {useEffect , useState} from 'react';
 const App = () =>  {
   const [data , setData] = useState([])
-  useEffect(() => {
-    fetch('/api/academy')
-    .then((res) => res.json())
-    .then((d) => {
-      if(d){
-        setData(d)
-      }
-    })
-  } , [])
+  // useEffect(() => {
+  //   fetch('/api/academy')
+  //   .then((res) => res.json())
+  //   .then((d) => {
+  //     if(d){
+  //       setData(d)
+  //     }
+  //   })
+  // } , [])
   return (
     <div className="App">
       <div className = "work">
