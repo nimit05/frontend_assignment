@@ -1,6 +1,5 @@
 const exp = require("express");
 const app = exp();
-const { db } = require("../backend/db");
 const cors = require('cors')
 
 app.use(cors())
@@ -14,8 +13,6 @@ app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-db.sync().then(() => {
   app.listen(port , () => {
       console.log('Server Started')
   })
-})
