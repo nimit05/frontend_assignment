@@ -2,7 +2,7 @@ import React , {useEffect , useState} from 'react';
 const App = () =>  {
   const [data , setData] = useState([])
   useEffect(() => {
-    fetch('/api/academy')
+    fetch('/api')
     .then((res) => res.json())
     .then((d) => {
       if(d){
