@@ -2,6 +2,7 @@ const exp = require("express");
 const app = exp();
 const {a} = require('./db')
 const cors = require('cors')
+const path = require('path')
 
 app.use(cors())
 
@@ -9,8 +10,7 @@ const port = process.env.PORT || 6878
 app.use(exp.urlencoded({ extended: true }));
 app.use(exp.json());
 
-// const database = new Datastore('database.db')
-// database.localDatabase();
+
 
 app.get('/api' , (req,res) => {
     try {
