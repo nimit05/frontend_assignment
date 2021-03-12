@@ -10,7 +10,7 @@ const port = process.env.PORT || 6878
 app.use(exp.urlencoded({ extended: true }));
 app.use(exp.json());
 
-
+app.use(exp.static(path.join(__dirname, "build")));
 
 app.get('/api' , (req,res) => {
     try {
